@@ -22,26 +22,18 @@ public class Servlet1 extends HttpServlet {
     
     @Override
     public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
-        //response.setContentType("text/html");
         response.getWriter().append("served at:").append(request.getContextPath());
-         
-          
     }
     
     @Override
     public void doPost(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
-        //response.setContentType("text/html");
         PrintWriter out=response.getWriter();
-        //out.println("<h2>Request Complete </h2>");
-       // String name=req.getParameter("place");
-          //System.out.println("<h4>Place Name: " + name+"</h4>");
-          
           //get city
           String name = request.getParameter("city");
           System.out.println(name);
           
           //api deployment
-          String apiKey="c1ebd3675c8f20a164d3505f9276fa1c";
+          String apiKey="insert_your_api_key_here";
           //api url 
           String apiURL="https://api.openweathermap.org/data/2.5/weather?q="+ name + "&appid=" + apiKey;
           try{
@@ -104,7 +96,6 @@ public class Servlet1 extends HttpServlet {
            System.out.println(e);
        }
        //sending request to jsp page.
-       //this.getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
         RequestDispatcher requestDispatcher=request.getRequestDispatcher("/index.jsp");
         requestDispatcher.forward(request, response);
     }
