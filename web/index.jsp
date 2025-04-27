@@ -6,6 +6,7 @@
         <title>Result | InfiniteWeather</title>
          <link rel="icon" href="logo_weather.png">
         <style>
+
              body{
                  background-image: url("img1.jpg");
                  background-repeat: no-repeat;
@@ -95,11 +96,6 @@
                <p><b>${windspeed} Km/h</b> <br> <i>Wind Speed</i></p>
                  </div> 
              </div>
-             
         </div>
-       
-        
-        
-        
     </body>
 </html>
